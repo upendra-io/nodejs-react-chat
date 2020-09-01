@@ -1,0 +1,60 @@
+.chat-form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5%;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.input-msg {
+  flex: 1 0 0;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  color: darken(adjust-hue(#0048aa, -155), 23.33);
+  border-radius: 6px 6px 6px 6px;
+  font-size: 1.2rem;
+}
+
+.msg-cont {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  border-bottom: 2px dashed #afafaf;
+  margin: 2rem auto 1rem;
+  transition: 500ms;
+}
+
+.msg-cont::after {
+  content: "";
+  position: relative;
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #0048aa;
+  transform: scaleX(0);
+  transform-origin: 0%;
+  opacity: 0;
+  transition: all 700ms ease;
+  top: 2px;
+}
+.msg-cont:focus-within {
+  border-color: transparent;
+}
+.msg-cont:focus-within::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.send {
+  cursor: pointer;
+}
+.send:hover {
+  color: #0048aa;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}

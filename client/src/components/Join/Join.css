@@ -1,0 +1,246 @@
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.joinOuterContainer-dark {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #1a1919;
+}
+.joinOuterContainer-light {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #fff;
+}
+
+.heading {
+  font-size: 2.5em;
+  padding-bottom: 30px;
+  border-bottom: 2px;
+}
+
+.label {
+  color: #afafaf;
+  font-size: 1.2rem;
+}
+.input {
+  outline: none;
+  border: none;
+  transform: translateX(1em) translateY(0rem);
+  overflow: hidden;
+  margin: 0;
+  width: 100%;
+  padding: 0.25rem 0;
+  background: none;
+  color: #6c757d;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: border 500ms;
+}
+
+.label {
+  z-index: 1;
+  position: absolute;
+  transform: translateY(-2rem);
+  transform-origin: 0%;
+  transition: transform 400ms;
+}
+
+.field {
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+  border-bottom: 2px dashed #afafaf;
+  margin: 2rem auto 1rem;
+  transition: 500ms;
+}
+@media (min-width: 320px) and (max-width: 500px) {
+  .field {
+    width: 100%;
+  }
+  .input {
+    font-size: 1em;
+  }
+  .label {
+    font-size: 1em;
+  }
+}
+
+.field::after {
+  content: "";
+  position: relative;
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #d16dff;
+  transform: scaleX(0);
+  transform-origin: 0%;
+  opacity: 0;
+  transition: all 700ms ease;
+  top: 2px;
+}
+.field:focus-within {
+  border-color: transparent;
+}
+.field:focus-within::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+.field:focus-within .label,
+.input:not(:placeholder-shown) + .label {
+  transform: scale(0.8) translateY(-3rem);
+  opacity: 1;
+}
+
+.mt-100 {
+  margin-top: 100px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  form {
+    width: 90%;
+  }
+}
+
+button:focus {
+  outline: 0;
+}
+.button {
+  margin-top: 2rem;
+  padding: 10px 30px;
+  font-weight: bold;
+  border: 2px solid greenyellow;
+  color: greenyellow;
+  border-radius: 100px;
+  background: transparent;
+  transition: all 1000ms;
+}
+
+.button:hover {
+  background-color: #28a745;
+  color: white;
+}
+.rn-form {
+  margin-top: 200px;
+}
+
+.light-mode {
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.25s ease-out;
+}
+
+.light-mode nav {
+  transition: background-color 0.25s ease-out;
+}
+
+.dark-mode {
+  height: 100%;
+  background-color: #1a1919;
+  color: #999;
+}
+
+.dark-mode nav {
+  background-color: #1b2938;
+}
+
+input[type="checkbox"].checkbox {
+  width: 40px;
+  height: 10px;
+  background: #555;
+  position: relative;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  vertical-align: 2px;
+  outline: none;
+}
+
+input[type="checkbox"].checkbox:checked + label {
+  left: 30px;
+}
+
+input[type="checkbox"].checkbox:focus-visible {
+  outline: solid 2px white;
+}
+
+input[type="checkbox"].checkbox + label {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: absolute;
+  left: 2px;
+  background: #fff;
+  opacity: 0.9;
+  background-color: cyan;
+}
+nav {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  background-color: steelblue;
+  padding: 20px;
+}
+
+.toggle-container {
+  display: flex;
+  margin: auto;
+  position: relative;
+  left: 40%;
+}
+
+.toggle {
+  position: relative;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+}
+.toggle-container > span {
+  font-size: 1.2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-top: 4px;
+}
+
+.toggle-container > span:last-child {
+  margin-top: 2px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15%;
+}
+.instagram {
+  margin-left: 30px;
+}
+
+.links {
+  color: #6c757d;
+}
+
+.links:hover {
+  color: #555;
+}

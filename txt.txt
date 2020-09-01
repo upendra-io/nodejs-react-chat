@@ -1,0 +1,41 @@
+ <div
+        className={
+          darkMode ? "joinOuterContainer-dark" : "joinOuterContainer-light"
+        }
+      >
+        <div className="joinInnerContainer">
+          <h1 className="heading" color={darkMode ? "#999" : "#333"}>
+            Join
+          </h1>
+          <div className="field">
+            <label className="label">
+              Name
+              <input
+                placeholder=" "
+                className="input"
+                onChange={(event) => setName(event.target.value)}
+              />
+            </label>
+          </div>
+          <div className="field">
+            <label className="label">
+              Room
+              <input
+                placeholder=""
+                className="input"
+                onChange={(event) => setRoom(event.target.value)}
+              />
+            </label>
+          </div>
+          <Link
+            onClick={(event) =>
+              !name || !room ? event.preventDefault() : null
+            }
+            to={"/chat?name=" + name + "&room=" + room}
+          >
+            <button className="button mt-20" type="submit">
+              Sign In
+            </button>
+          </Link>
+        </div>
+      </div>
